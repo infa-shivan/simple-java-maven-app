@@ -8,32 +8,6 @@
   <name>my-app</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-      <dependency>
-           <groupId>org.eclipse.jetty</groupId>
-           <artifactId>jetty-server</artifactId>
-           <version>${jetty.version}</version>
-           <exclusions>
-               <exclusion>
-                   <groupId>javax.servlet</groupId>
-                   <artifactId>javax.servlet-api</artifactId>
-               </exclusion>
-           </exclusions>
-       </dependency>
-       <dependency>
-           <groupId>org.eclipse.jetty</groupId>
-           <artifactId>jetty-util</artifactId>
-           <version>${jetty.version}</version>
-       </dependency>
-       <dependency>
-           <groupId>org.eclipse.jetty</groupId>
-           <artifactId>jetty-http</artifactId>
-           <version>${jetty.version}</version>
-       </dependency>
-       <dependency>
-           <groupId>org.eclipse.jetty</groupId>
-           <artifactId>jetty-servlet</artifactId>
-           <version>${jetty.version}</version>
-       </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
