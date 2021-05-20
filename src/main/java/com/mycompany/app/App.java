@@ -52,7 +52,7 @@ public class App {
 		
 		}
 		
-		synchronized(this) { }
+		synchronized(app) { }
 		
 		System.exit(1);
 
