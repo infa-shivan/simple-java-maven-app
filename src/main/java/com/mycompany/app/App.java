@@ -26,10 +26,10 @@ public class App {
 	
 	
 
-	public static void main(String[] args) throws Throwable {
+	public static void main(String[] args) {
 
 		App app = new App();
-                app.finalize();
+         
 		String s = "Sathvik";
 		String g = "Sathvik";
 
