@@ -11,7 +11,8 @@ public class App {
 
 	private static Logger log = Logger.getLogger(App.class.getName());
 	private final String message = "Hello World!";
-	private final String PASSWORD = "Hello World!";
+	public final String PASSWORD = "Hello World!";
+	public static String username = "vsathvik";
 
 	public App() {
 	}
@@ -22,9 +23,13 @@ public class App {
 			// do something
 		}
 	}
+	
+	
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Throwable {
 
+		App app = new App();
+                app.finalize();
 		String s = "Sathvik";
 		String g = "Sathvik";
 
@@ -37,6 +42,17 @@ public class App {
 		} catch (NumberFormatException e) {
 			log.info("Failed to parse val = " + val);
 		}
+		
+		
+		int num = 0;
+		switch(num){
+		
+			case 1: System.out.println("1");
+				break;
+		
+		}
+		
+		synchronized(this) { }
 		
 		System.exit(1);
 
