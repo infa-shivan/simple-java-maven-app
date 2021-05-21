@@ -11,7 +11,7 @@ public class App {
 
 	private static Logger log = Logger.getLogger(App.class.getName());
 	private final String message = "Hello World!";
-	public final String PASSWORD = "Hello World!";
+	public final String PASSWORD = "Hello World!"; // Vulnerable cod , do not declare password  which is security issue.
 	public static String username = "vsathvik";
 
 	public App() {
@@ -33,28 +33,28 @@ public class App {
 		String s = "Sathvik";
 		String g = "Sathvik";
 
-		System.out.println(s == g);
+		System.out.println(s == g); // Incorrect comparision of strings equality.
 
 		String val = "vulnn";
 		try {
 
-			int value = Integer.parseInt(val);
+			int value = Integer.parseInt(val); // Incorrect parsing of Strings as integers.
 		} catch (NumberFormatException e) {
 			log.info("Failed to parse val = " + val);
 		}
 		
 		
 		int num = 0;
-		switch(num){
+		switch(num){ // Switch doesnt have default case which is incorrect.
 		
 			case 1: System.out.println("1");
 				break;
 		
 		}
 		
-		synchronized(app) { }
+		synchronized(app) { } // Do not keep empty synchronized blocks.
 		
-		System.exit(1);
+		System.exit(1); // Do not use system exit.
 
 	}
 
