@@ -11,7 +11,7 @@ public class App {
 
 	private static Logger log = Logger.getLogger(App.class.getName());
 	private final String message = "Hello World!";
-	public final String PASSWORD = "Hello World!"; // Vulnerable cod , do not declare password  which is security issue.
+	public final String PASSWORD = "Hello World!"; // Vulnerable code , do not declare password  which is security issue.
 	public static String username = "vsathvik";
 private static String[] colors = {"WHITE"};
 	
