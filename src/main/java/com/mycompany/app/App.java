@@ -13,7 +13,9 @@ public class App {
 	private final String message = "Hello World!";
 	public final String PASSWORD = "Hello World!"; // Vulnerable cod , do not declare password  which is security issue.
 	public static String username = "vsathvik";
-
+private static String[] colors = {"WHITE"};
+	
+	public final  static String[] color = {"RED"};
 	public App() {
 	}
 
@@ -24,12 +26,30 @@ public class App {
 		}
 	}
 	
+	public String[] getColors() {
+		return colors;
+	}
+
 	
 
 	public static void main(String[] args) {
 
+		boolean isValid = false;
+		
+		if(isValid = true) {
+			
+			System.out.println("Incorrect boolean check");			
+		}
+		
 		App app = new App();
          
+		System.out.println(app.getColors().length);
+		if (app.getClass().getName().contains("App")) {
+
+			System.out.println("Incorrect Comparision");
+
+		}
+
 		String s = "Sathvik";
 		String g = "Sathvik";
 
