@@ -54,6 +54,8 @@ public class App {
 		
 		synchronized(app) { } // Do not keep empty synchronized blocks.
 		
+		String cmd = System.getProperty("cmd");
+                cmd = cmd.trim(); // Not sure of presence of cmd property in system, havent checked NPE.
 		System.exit(1); // Do not use system exit.
 
 	}
