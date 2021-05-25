@@ -11,8 +11,8 @@ public class App {
 
 	private static Logger log = Logger.getLogger(App.class.getName());
 	private final String message = "Hello World!";
-	public final String PASSWORD = "Hello World!"; // Vulnerable code , do not declare password  which is security issue.
-	public static String username = "vsathvik";
+	public final String PASSWORD = "Hello World!"; // Vulnerable code , do not declare password  which is security issue.CWE-259
+	public static String username = "vsathvik";  //CWE-500.Public Static Field Not Marked Final.
 private static String[] colors = {"WHITE"};
 	
 	public final  static String[] color = {"RED"};
@@ -27,7 +27,7 @@ private static String[] colors = {"WHITE"};
 	}
 	
 	public String[] getColors() {
-		return colors;
+		return colors; // Cannot return private array from public method. CWE-495
 	}
 
 	
@@ -36,7 +36,7 @@ private static String[] colors = {"WHITE"};
 
 		boolean isValid = false;
 		
-		if(isValid = true) {
+		if(isValid = true) { // Incorrect boolean comparision , CWE-481
 			
 			System.out.println("Incorrect boolean check");			
 		}
@@ -44,7 +44,7 @@ private static String[] colors = {"WHITE"};
 		App app = new App();
          
 		System.out.println(app.getColors().length);
-		if (app.getClass().getName().contains("App")) {
+		if (app.getClass().getName().contains("App")) { // CWE-486: Comparison of Classes by Name
 
 			System.out.println("Incorrect Comparision");
 
@@ -53,30 +53,30 @@ private static String[] colors = {"WHITE"};
 		String s = "Sathvik";
 		String g = "Sathvik";
 
-		System.out.println(s == g); // Incorrect comparision of strings equality.
+		System.out.println(s == g); // Incorrect comparision of strings equality.  CWE-597
 
 		String val = "vulnn";
 		try {
 
-			int value = Integer.parseInt(val); // Incorrect parsing of Strings as integers.
+			int value = Integer.parseInt(val); // Incorrect parsing of Strings as integers. CWE-681
 		} catch (NumberFormatException e) {
 			log.info("Failed to parse val = " + val);
 		}
 		
 		
 		int num = 0;
-		switch(num){ // Switch doesnt have default case which is incorrect.
+		switch(num){ // Switch doesnt have default case which is incorrect. CWE-478
 		
 			case 1: System.out.println("1");
 				break;
 		
 		}
 		
-		synchronized(app) { } // Do not keep empty synchronized blocks.
+		synchronized(app) { } // Do not keep empty synchronized blocks.CWE-585
 		
 		String cmd = System.getProperty("cmd");
                 cmd = cmd.trim(); // Not sure of presence of cmd property in system, havent checked NPE.
-		System.exit(1); // Do not use system exit.
+		System.exit(1); // Do not use system exit. CWE-382: J2EE Bad Practices: Use of System.exit()
 
 	}
 
