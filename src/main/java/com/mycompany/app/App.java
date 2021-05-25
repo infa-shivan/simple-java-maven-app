@@ -65,6 +65,7 @@ private static String[] colors = {"WHITE"};
 		
 		
 		int num = 0;
+		int num1 = 1;
 		switch(num){ // Switch doesnt have default case which is incorrect. CWE-478
 		
 			case 1: System.out.println("1");
