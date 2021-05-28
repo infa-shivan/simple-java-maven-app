@@ -1,4 +1,4 @@
-
+package com.mycompany.app;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
