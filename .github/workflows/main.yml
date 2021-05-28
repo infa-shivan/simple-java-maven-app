@@ -23,14 +23,15 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: ''
-	- name: Cache Maven packages
+    - name: Cache Maven packages
       uses: actions/cache@v2
       with:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-	- name: Build with Maven
+        
+    - name: Build with Maven
       run: mvn clean package
-	
+              
 
     - uses: papeloto/action-zip@v1
       with:
@@ -52,18 +53,18 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: 1.8
-	- run: java -jar pipeline-scan.jar --veracode_api_id "${{secrets.VERACODE_API_ID}}" --veracode_api_key "${{secrets.VERACODE_API_KEY}}" --fail_on_severity="Very High, High"
+    - run: java -jar pipeline-scan.jar --veracode_api_id "${{secrets.VERACODE_API_ID}}" --veracode_api_key "${{secrets.VERACODE_API_KEY}}" --fail_on_severity="Very High, High" --file App.jar
       continue-on-error: true
     - uses: actions/upload-artifact@v1
       with:
-        name: ScanResults
-        path: results.json
+        name: Scanresults
+        path: results2.json
     - name: Convert pipeline scan output to SARIF format
       id: convert
       uses: veracode/veracode-pipeline-scan-results-to-sarif@master
       with:
-        pipeline-results-json: results.json
-	source-base-path-1: "^simple-java-maven-app"	
+        pipeline-results-json: results1.json
+        source-base-path-1: "^simple-java-maven-app"        
     - uses: github/codeql-action/upload-sarif@v1
       with:
         # Path to SARIF file relative to the root of the repository
