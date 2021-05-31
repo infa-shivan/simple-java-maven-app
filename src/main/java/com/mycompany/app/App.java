@@ -16,6 +16,7 @@ public class App {
 private static String[] colors = {"WHITE"};
 	
 	public final  static String[] color = {"RED"};
+	public final static String grafana_api_key="1hjyuyufgigewqdy";
 	public App() {
 	}
 
