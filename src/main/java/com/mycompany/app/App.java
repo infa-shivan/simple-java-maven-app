@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  */
 public class App {
 	
-	public static final String aws_access_key_id = "dgsd4353ryufyfdufqufduwqd";
+	public static final String grafana_api_key = "eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RWdUalBJTllUTk83VlhtVGwiLCJuIjoiYXBpa2V5Y3VybCIsImlkIjo2fQ==";
     public static final String atlassian_jwt = "dgsadyufyfdufqufduwqd";
     public static final String terraform_api_token = "sd";
     public static final String frameio_jwt = "dgsdyufyfdufqufduwqd";
