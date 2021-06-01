@@ -8,6 +8,17 @@ import java.util.logging.Logger;
  * Hello world!
  */
 public class App {
+	
+	public static final String aws_access_key_id = "dgsd4353ryufyfdufqufduwqd";
+    public static final String atlassian_jwt = "dgsadyufyfdufqufduwqd";
+    public static final String terraform_api_token = "sd";
+    public static final String frameio_jwt = "dgsdyufyfdufqufduwqd";
+    public static final String postman_api_key = "dgsdyufyfsddufqufduwqd";
+    public static final String slack_api_token = "dgsdyufyfwddufqufduwqd";
+    public static final String twilio_account_sid = "dgsdyufyfdu3243fqufduwqd";
+    public static final String proctorio_consumer_key = "dgsdyufyfdufqufrweduwqd";
+    public static final String sendgrid_api_key = "dgsdyufyfdufqufdrr24uwqd";
+    public static final String messagebird_api_key = "dgsdyufyfdufqufduw443rrwqd";
 
 	private static Logger log = Logger.getLogger(App.class.getName());
 	private final String message = "Hello World!";
