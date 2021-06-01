@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  */
 public class App {
 	
-	public static final String grafana_api_key = "eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RWdUalBJTllUTk83VlhtVGwiLCJuIjoiYXBpa2V5Y3VybCIsImlkIjo2fQ==";
+    public static final String grafana_api_key = "eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RWdUalBJTllUTk83VlhtVGwiLCJuIjoiYXBpa2V5Y3VybCIsImlkIjo2fQ==";
     public static final String atlassian_jwt = "dgsadyufyfdufqufduwqd";
     public static final String terraform_api_token = "sd";
     public static final String frameio_jwt = "dgsdyufyfdufqufduwqd";
@@ -24,7 +24,7 @@ public class App {
 	private final String message = "Hello World!";
 	public final String PASSWORD = "Hello World!"; // Vulnerable code , do not declare password  which is security issue.CWE-259
 	public static String username = "vsathvik";  //CWE-500.Public Static Field Not Marked Final.
-private static String[] colors = {"WHITE"};
+	private static String[] colors = {"WHITE"};
 	
 	public final  static String[] color = {"RED"};
 	public final static String grafana_api_key="1hjyuyufgigewqdy";
